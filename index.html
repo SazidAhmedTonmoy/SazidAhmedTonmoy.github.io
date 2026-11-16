@@ -24,7 +24,7 @@
   </script>
   <style>
     body { background-color: #070b14; color: #e2e8f0; }
-    .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.12); }
+    .glass { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.12); }
     .glass-hover:hover { border-color: rgba(56, 189, 248, 0.45); transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2); }
     .cursor-blink { animation: blink 1s step-end infinite; }
     @keyframes blink { 50% { opacity: 0; } }
@@ -41,24 +41,27 @@
   <!-- Navbar -->
   <header class="sticky top-0 z-50 glass border-b border-slate-800/80">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="font-mono font-bold text-lg text-sky-400 tracking-tight">&lt;SazidTonmoy /&gt;</a>
+      <a href="#" class="flex items-center gap-2 font-mono font-bold text-lg text-sky-400 tracking-tight">
+        <div class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-xs font-bold">&lt;S/&gt;</div>
+        <span>SazidTonmoy</span>
+      </a>
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
         <a href="#about" class="hover:text-sky-400 transition">About</a>
         <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
         <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
-        <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+        <a href="#academics" class="hover:text-sky-400 transition">Undergrad Works</a>
         <a href="#contact" class="px-4 py-2 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/30 hover:bg-sky-500 hover:text-slate-950 transition">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="about" class="max-w-6xl mx-auto px-6 pt-20 pb-16 md:py-28">
+  <section id="about" class="max-w-6xl mx-auto px-6 pt-16 pb-16 md:py-24">
     <div class="grid md:grid-cols-3 gap-12 items-center">
       <div class="md:col-span-2 space-y-6">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-mono">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Available for Engineering & Automation Opportunities
+          Software Engineer @ ATPL Dhaka (Ampec Technologies)
         </div>
 
         <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white">
@@ -70,14 +73,13 @@
         </div>
 
         <p class="text-slate-400 leading-relaxed text-base md:text-lg max-w-2xl">
-          IoT & Edge AI Software Engineer with 3+ years of experience building end-to-end systems in
-          <span class="text-slate-200 font-medium">Python, C/C++, Linux, Raspberry Pi, NVIDIA Jetson, and VxWorks</span>.
-          Proven track record combining LiDAR/radar sensing, YOLO computer vision, cloud telemetry, and full-stack workflow automation.
+          IoT & Edge AI Software Engineer specializing in Python automation, computer vision, and embedded systems. 
+          Building scalable enterprise platforms and safety-critical edge solutions on <span class="text-slate-200 font-medium">NVIDIA Jetson & Raspberry Pi</span>.
         </p>
 
         <div class="flex flex-wrap gap-4 pt-2">
           <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition flex items-center gap-2">
-            <i data-lucide="layers" class="w-4 h-4"></i> Explore Projects
+            <i data-lucide="layers" class="w-4 h-4"></i> View Professional Work
           </a>
           <a href="https://github.com/SazidAhmedTonmoy" target="_blank" class="px-5 py-3 rounded-xl glass hover:border-sky-400/50 text-slate-200 font-medium transition flex items-center gap-2">
             <i data-lucide="github" class="w-4 h-4"></i> GitHub
@@ -88,31 +90,35 @@
         </div>
       </div>
 
-      <!-- Interactive Terminal Card -->
-      <div class="glass rounded-2xl p-6 font-mono text-xs md:text-sm border border-slate-800 shadow-2xl">
-        <div class="flex items-center gap-2 pb-4 mb-4 border-b border-slate-800">
-          <span class="w-3 h-3 rounded-full bg-rose-500"></span>
-          <span class="w-3 h-3 rounded-full bg-amber-500"></span>
-          <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-          <span class="ml-2 text-slate-500">sazid@edge-jetson:~</span>
+      <!-- Profile Avatar & Quick Stats Card -->
+      <div class="glass rounded-3xl p-6 text-center space-y-4 border border-slate-800 shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-48 h-48 bg-sky-500/20 rounded-full blur-2xl"></div>
+        
+        <!-- Avatar Frame -->
+        <div class="relative w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-sky-400 to-indigo-500 shadow-xl">
+          <img src="https://avatars.githubusercontent.com/u/SazidAhmedTonmoy" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'" alt="Md Sazid Ahmed Tonmoy" class="w-full h-full object-cover rounded-full bg-slate-900" />
         </div>
-        <div class="space-y-3 text-slate-300">
-          <p><span class="text-emerald-400">$</span> whoami</p>
-          <p class="text-slate-400 pl-3">IoT & Edge AI Engineer @ Dhaka, BD</p>
-          <p><span class="text-emerald-400">$</span> cat core_metrics.json</p>
-          <pre class="text-sky-300 pl-3 overflow-x-auto">{
-  "experience": "3+ Years",
-  "hardware": ["Jetson Orin", "RPi 4", "VxWorks"],
-  "vision_mAP": "99.25% (YOLOv6)",
-  "estimation_db": "24,045+ records",
-  "degree": "B.Sc. CSE (Cum Laude)"
-}</pre>
+
+        <div>
+          <h3 class="text-lg font-bold text-white">Md Sazid Ahmed Tonmoy</h3>
+          <p class="text-xs font-mono text-sky-400">IoT & Edge AI Software Engineer</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 pt-2 text-left font-mono text-xs">
+          <div class="glass p-3 rounded-xl">
+            <span class="text-slate-500 block">Experience</span>
+            <strong class="text-white text-sm">3+ Years</strong>
+          </div>
+          <div class="glass p-3 rounded-xl">
+            <span class="text-slate-500 block">Degree</span>
+            <strong class="text-white text-sm">B.Sc. CSE</strong>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Timeline -->
+  <!-- Professional Experience Section -->
   <section id="experience" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
     <div class="flex items-center gap-3 mb-10">
       <i data-lucide="briefcase" class="text-sky-400 w-6 h-6"></i>
@@ -152,7 +158,7 @@
           </div>
           <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
             <li>Developed and optimized embedded <strong>C</strong> software across <strong>VxWorks RTOS</strong> and Linux for enterprise networking switches.</li>
-            <li>Engineered the TFTP Server Protocol (RFC 1350/2347/2348) with option extensions for the BDCOM S2510-P switch.</li>
+            <li>Engineered the <strong>TFTP Server Protocol (RFC 1350/2347/2348)</strong> with blocksize option extensions for the BDCOM S2510-P switch.</li>
             <li>Executed rigorous protocol verification, manual/system testing, and pre-deployment debugging.</li>
           </ul>
         </div>
@@ -160,52 +166,52 @@
     </div>
   </section>
 
-  <!-- Interactive Filterable Projects -->
+  <!-- Filterable Projects Section (Prioritizing Professional Work) -->
   <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
       <div class="flex items-center gap-3">
         <i data-lucide="cpu" class="text-sky-400 w-6 h-6"></i>
-        <h2 class="text-2xl md:text-3xl font-bold text-white">Featured Projects</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Featured Professional & Advanced Systems</h2>
       </div>
 
-      <!-- Filter Buttons -->
+      <!-- Filter Tabs -->
       <div class="flex flex-wrap gap-2" id="filter-buttons">
-        <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 rounded-lg text-xs font-mono bg-sky-500 text-slate-950 font-semibold transition">All</button>
+        <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 rounded-lg text-xs font-mono bg-sky-500 text-slate-950 font-semibold transition">All Projects</button>
+        <button onclick="filterProjects('pro')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono glass text-slate-300 hover:text-white transition">ATPL & Industry</button>
         <button onclick="filterProjects('edge')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono glass text-slate-300 hover:text-white transition">Edge AI & IoT</button>
-        <button onclick="filterProjects('web')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono glass text-slate-300 hover:text-white transition">Automation & Web</button>
-        <button onclick="filterProjects('ml')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono glass text-slate-300 hover:text-white transition">Deep Learning & C</button>
+        <button onclick="filterProjects('embedded')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono glass text-slate-300 hover:text-white transition">Embedded C (BDCOM)</button>
       </div>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
 
-      <!-- Project 1 -->
-      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="web">
+      <!-- Pro Project 1 -->
+      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover border-sky-500/30" data-category="pro">
         <div>
           <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-mono text-sky-400 px-2.5 py-1 rounded bg-sky-500/10">Automation & Web</span>
-            <a href="https://github.com/SazidAhmedTonmoy/TEC_COST_ESTIMATOR" target="_blank" class="text-slate-400 hover:text-sky-400"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+            <span class="text-xs font-mono text-sky-400 px-2.5 py-1 rounded bg-sky-500/10">ATPL Professional</span>
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">TEC ConEst — Estimation Platform</h3>
-          <p class="text-slate-400 text-sm mb-4">Full-stack electrical estimation web platform managing 3,623 catalogue items & 24,045 component records. Includes openpyxl Excel automation and an ML auto-takeoff extension using YOLO/PyTorch.</p>
+          <h3 class="text-lg font-bold text-white mb-2">TEC ConEst — Electrical Estimation Platform</h3>
+          <p class="text-slate-400 text-sm mb-4">Shared electrical estimation platform handling 3,623 catalogue items & 24,045 component records. Features openpyxl Excel automation and ML-assisted symbol takeoff.</p>
         </div>
         <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
           <span class="px-2 py-0.5 bg-slate-800 rounded">Python</span>
-          <span class="px-2 py-0.5 bg-slate-800 rounded">JavaScript</span>
           <span class="px-2 py-0.5 bg-slate-800 rounded">SQLite</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">openpyxl</span>
           <span class="px-2 py-0.5 bg-slate-800 rounded">YOLO</span>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="edge">
+      <!-- Pro Project 2 -->
+      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover border-sky-500/30" data-category="pro">
         <div>
           <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded bg-emerald-500/10">Edge AI & IoT</span>
+            <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded bg-emerald-500/10">ATPL Professional</span>
             <i data-lucide="radar" class="w-4 h-4 text-emerald-400"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Overheight Vehicle Detection System</h3>
-          <p class="text-slate-400 text-sm mb-4">NVIDIA Jetson edge controller combining LiDAR motion tracking with real-time YOLO segmentation to trigger roadside LED warning signs and cloud telemetry.</p>
+          <h3 class="text-lg font-bold text-white mb-2">Overheight Vehicle Detection & Warning</h3>
+          <p class="text-slate-400 text-sm mb-4">NVIDIA Jetson edge controller integrating LiDAR motion tracking and YOLO segmentation for real-time roadside LED warnings and cloud telemetry.</p>
         </div>
         <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
           <span class="px-2 py-0.5 bg-slate-800 rounded">NVIDIA Jetson</span>
@@ -215,11 +221,11 @@
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="edge">
+      <!-- Pro Project 3 -->
+      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover border-sky-500/30" data-category="pro">
         <div>
           <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded bg-emerald-500/10">Edge AI & IoT</span>
+            <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded bg-emerald-500/10">ATPL Professional</span>
             <i data-lucide="radio" class="w-4 h-4 text-emerald-400"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-2">Advanced Radar & LoRaWAN Warning System</h3>
@@ -233,118 +239,140 @@
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="ml">
+      <!-- Embedded Project -->
+      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="embedded">
         <div>
           <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-mono text-indigo-400 px-2.5 py-1 rounded bg-indigo-500/10">Embedded C</span>
+            <span class="text-xs font-mono text-indigo-400 px-2.5 py-1 rounded bg-indigo-500/10">BDCOM Industry</span>
             <a href="https://github.com/SazidAhmedTonmoy/Professional-Project" target="_blank" class="text-slate-400 hover:text-sky-400"><i data-lucide="external-link" class="w-4 h-4"></i></a>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">TFTP Server Protocol (VxWorks)</h3>
-          <p class="text-slate-400 text-sm mb-4">Standards-compliant TFTP server written in C for the BDCOM S2510-P switch under Wind River VxWorks RTOS, supporting RFC 1350, 2347, and 2348 blocksize options.</p>
+          <h3 class="text-lg font-bold text-white mb-2">TFTP Server Protocol (RFC 1350/2347/2348)</h3>
+          <p class="text-slate-400 text-sm mb-4">Embedded C implementation of the TFTP server for the BDCOM S2510-P networking switch running under Wind River VxWorks RTOS.</p>
         </div>
         <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
-          <span class="px-2 py-0.5 bg-slate-800 rounded">C</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">C Language</span>
           <span class="px-2 py-0.5 bg-slate-800 rounded">VxWorks RTOS</span>
           <span class="px-2 py-0.5 bg-slate-800 rounded">RFC 1350</span>
         </div>
       </div>
 
-      <!-- Project 5 -->
-      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="ml">
+      <!-- Edge Project -->
+      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="edge">
         <div>
           <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-mono text-purple-400 px-2.5 py-1 rounded bg-purple-500/10">Computer Vision</span>
-            <a href="https://github.com/SazidAhmedTonmoy/Projects" target="_blank" class="text-slate-400 hover:text-sky-400"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+            <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded bg-emerald-500/10">Edge IoT</span>
+            <i data-lucide="shield-alert" class="w-4 h-4 text-emerald-400"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Tooth Decay & Ocular Disease AI</h3>
-          <p class="text-slate-400 text-sm mb-4">Deep learning diagnostic suite featuring a 99.25% mAP YOLOv6 dental decay detector and a 99.45% accuracy ResNet50 ocular disease Streamlit web application.</p>
+          <h3 class="text-lg font-bold text-white mb-2">School Zone Alert Protocol (TSI-SP-084)</h3>
+          <p class="text-slate-400 text-sm mb-4">Extended a Raspberry Pi alert controller against the TSI-SP-084 communications specification with a local web GUI dashboard for operators.</p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
+          <span class="px-2 py-0.5 bg-slate-800 rounded">Raspberry Pi</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">TSI-SP-084</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">Python GUI</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Undergraduate Projects Section -->
+  <section id="academics" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
+    <div class="flex items-center gap-3 mb-10">
+      <i data-lucide="graduation-cap" class="text-sky-400 w-6 h-6"></i>
+      <h2 class="text-2xl md:text-3xl font-bold text-white">Undergraduate Research & CSE Projects (NSU)</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Undergrad 1 -->
+      <div class="glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover">
+        <div>
+          <span class="text-xs font-mono text-purple-400 px-2.5 py-1 rounded bg-purple-500/10 mb-4 inline-block">Deep Learning & Vision</span>
+          <h3 class="text-lg font-bold text-white mb-2">Tooth Decay Detection (YOLOv6)</h3>
+          <p class="text-slate-400 text-sm mb-4">Computer vision model trained on a dental dataset achieving <strong>99.25% mAP</strong> for real-time decay detection and edge diagnostics.</p>
         </div>
         <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
           <span class="px-2 py-0.5 bg-slate-800 rounded">YOLOv6</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">OpenCV</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">Python</span>
+        </div>
+      </div>
+
+      <!-- Undergrad 2 -->
+      <div class="glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover">
+        <div>
+          <span class="text-xs font-mono text-purple-400 px-2.5 py-1 rounded bg-purple-500/10 mb-4 inline-block">Medical AI & Streamlit</span>
+          <h3 class="text-lg font-bold text-white mb-2">Ocular Disease Recognition</h3>
+          <p class="text-slate-400 text-sm mb-4">Automated screening tool utilizing ResNet50 to classify cataracts, glaucoma, and myopia with <strong>99.45% accuracy</strong> and a Streamlit web interface.</p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
           <span class="px-2 py-0.5 bg-slate-800 rounded">ResNet50</span>
           <span class="px-2 py-0.5 bg-slate-800 rounded">PyTorch</span>
           <span class="px-2 py-0.5 bg-slate-800 rounded">Streamlit</span>
         </div>
       </div>
 
-      <!-- Project 6 -->
-      <div class="project-card glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover" data-category="edge">
+      <!-- Undergrad 3 -->
+      <div class="glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover">
         <div>
-          <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded bg-emerald-500/10">Edge AI & IoT</span>
-            <i data-lucide="shield-alert" class="w-4 h-4 text-emerald-400"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">School Zone Alert Protocol (TSI-SP-084)</h3>
-          <p class="text-slate-400 text-sm mb-4">Extended a Raspberry Pi alert controller against the TSI-SP-084 communications specification with a local web/GUI dashboard for field operators.</p>
+          <span class="text-xs font-mono text-purple-400 px-2.5 py-1 rounded bg-purple-500/10 mb-4 inline-block">Healthcare ML</span>
+          <h3 class="text-lg font-bold text-white mb-2">Pneumonia & COVID-19 Classification</h3>
+          <p class="text-slate-400 text-sm mb-4">Deep learning diagnostic model built on MobileNetV2 with transfer learning across 5,000 chest X-ray images, achieving ~98% accuracy.</p>
         </div>
         <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
-          <span class="px-2 py-0.5 bg-slate-800 rounded">Raspberry Pi</span>
-          <span class="px-2 py-0.5 bg-slate-800 rounded">TSI-SP-084</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">MobileNetV2</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">TensorFlow</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">Keras</span>
+        </div>
+      </div>
+
+      <!-- Undergrad 4 -->
+      <div class="glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover">
+        <div>
+          <span class="text-xs font-mono text-sky-400 px-2.5 py-1 rounded bg-sky-500/10 mb-4 inline-block">Data Science</span>
+          <h3 class="text-lg font-bold text-white mb-2">Heart Disease & Diabetes Predictor</h3>
+          <p class="text-slate-400 text-sm mb-4">Supervised machine learning classifiers utilizing exploratory data analysis and scikit-learn models for early medical risk assessment.</p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
+          <span class="px-2 py-0.5 bg-slate-800 rounded">Scikit-Learn</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">Pandas</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">NumPy</span>
+        </div>
+      </div>
+
+      <!-- Undergrad 5 -->
+      <div class="glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover">
+        <div>
+          <span class="text-xs font-mono text-sky-400 px-2.5 py-1 rounded bg-sky-500/10 mb-4 inline-block">Web Systems</span>
+          <h3 class="text-lg font-bold text-white mb-2">NSU Internship Management System</h3>
+          <p class="text-slate-400 text-sm mb-4">Relational database web platform built to streamline student applications, evaluations, and advisor report workflows.</p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
+          <span class="px-2 py-0.5 bg-slate-800 rounded">PHP</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">MySQL</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">JavaScript</span>
+        </div>
+      </div>
+
+      <!-- Undergrad 6 -->
+      <div class="glass rounded-2xl p-6 flex flex-col justify-between transition glass-hover">
+        <div>
+          <span class="text-xs font-mono text-sky-400 px-2.5 py-1 rounded bg-sky-500/10 mb-4 inline-block">Utilities</span>
+          <h3 class="text-lg font-bold text-white mb-2">Formula_Pro & Vivid Letter</h3>
+          <p class="text-slate-400 text-sm mb-4">Computational engineering calculation scripts and automated text manipulation/document-formatting utilities.</p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-300">
           <span class="px-2 py-0.5 bg-slate-800 rounded">Python</span>
+          <span class="px-2 py-0.5 bg-slate-800 rounded">Jupyter</span>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Skills & Education Grid -->
-  <section id="skills" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
-    <div class="grid md:grid-cols-2 gap-10">
-      <div>
-        <div class="flex items-center gap-3 mb-6">
-          <i data-lucide="terminal" class="text-sky-400 w-6 h-6"></i>
-          <h2 class="text-2xl font-bold text-white">Technical Skills</h2>
-        </div>
-        <div class="space-y-4">
-          <div class="glass p-4 rounded-xl">
-            <h4 class="text-xs font-mono uppercase text-sky-400 mb-2">Programming & Automation</h4>
-            <p class="text-sm text-slate-300">Python, C, C++, JavaScript, Bash/Shell, openpyxl, n8n, Selenium, Playwright</p>
-          </div>
-          <div class="glass p-4 rounded-xl">
-            <h4 class="text-xs font-mono uppercase text-sky-400 mb-2">Embedded IoT & Protocols</h4>
-            <p class="text-sm text-slate-300">NVIDIA Jetson Orin NX, Raspberry Pi, VxWorks, Embedded Linux, MQTT, TCP/UDP, LoRaWAN, I2C, SPI, UART, TLS/X.509</p>
-          </div>
-          <div class="glass p-4 rounded-xl">
-            <h4 class="text-xs font-mono uppercase text-sky-400 mb-2">Computer Vision, AI & Backend</h4>
-            <p class="text-sm text-slate-300">YOLO, OpenCV, PyTorch, TensorFlow, Gemini API, Ollama, Flask, FastAPI, SQLite, MySQL, Docker, AWS IoT Core</p>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="flex items-center gap-3 mb-6">
-          <i data-lucide="graduation-cap" class="text-sky-400 w-6 h-6"></i>
-          <h2 class="text-2xl font-bold text-white">Education & Certifications</h2>
-        </div>
-        <div class="space-y-4">
-          <div class="glass p-5 rounded-xl">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-white">B.Sc. in Computer Science & Engineering</h3>
-              <span class="text-xs font-mono text-emerald-400">Cum Laude</span>
-            </div>
-            <p class="text-sky-400 text-sm">North South University, Dhaka</p>
-            <p class="text-xs text-slate-400 mt-1">Jan 2019 – Oct 2022 • CGPA: 3.52 / 4.00</p>
-          </div>
-
-          <div class="glass p-5 rounded-xl space-y-2.5">
-            <h4 class="text-xs font-mono uppercase text-sky-400">Certifications & Training</h4>
-            <div class="text-sm text-slate-300 flex items-center gap-2">
-              <i data-lucide="award" class="w-4 h-4 text-amber-400 shrink-0"></i>
-              <span><strong>CCNA</strong> — AIUB Institute of Continuing Education (2023)</span>
-            </div>
-            <div class="text-sm text-slate-300 flex items-center gap-2">
-              <i data-lucide="award" class="w-4 h-4 text-sky-400 shrink-0"></i>
-              <span><strong>Embedded C, DSA & VxWorks/Linux</strong> — Shanghai BDCOM (2023)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Footer -->
-  <footer id="contact" class="border-t border-slate-900 py-14">
+  <!-- Skills & Contact Footer -->
+  <footer id="contact" class="border-t border-slate-900 py-16">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
       <h2 class="text-2xl md:text-3xl font-bold text-white">Let's Build Something Intelligent</h2>
       <p class="text-slate-400 text-sm max-w-md mx-auto">
@@ -362,11 +390,10 @@
     </div>
   </footer>
 
-  <!-- Interactive Scripts -->
+  <!-- Scripts -->
   <script>
     lucide.createIcons();
 
-    // Typewriter Effect
     const roles = [
       "IoT & Edge AI Software Engineer",
       "Python Workflow Automation Architect",
@@ -394,7 +421,6 @@
     }
     typeLoop();
 
-    // Project Category Filter
     function filterProjects(category) {
       const cards = document.querySelectorAll('.project-card');
       const buttons = document.querySelectorAll('.filter-btn');
